@@ -1,0 +1,22 @@
+using sysbus
+
+mach create
+machine LoadPlatformDescription @platforms/cpus/stm32f103.repl
+
+$elf?=@./.pio/build/genericSTM32F103C8/firmware.elf
+
+showAnalyzer uart2
+
+
+macro reset
+"""
+    sysbus LoadELF $elf
+"""
+
+macro initialize_fw
+"""
+	machine StartGdbServer 3333 true
+"""
+
+runMacro $reset
+runMacro $initialize_fw
