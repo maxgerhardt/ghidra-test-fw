@@ -5,7 +5,7 @@
 1. Have PlatformIO installed (see [here](https://docs.platformio.org/en/latest/core/installation.html#installation-methods) or `sudo -H pip3 install platformio`)
 2. Clone repo
 3. Execute `pio run` in it 
-4. Compiled firmware will be in `.pio/build/genericSTM32F103C8/firmware.bin`
+4. Compiled firmware will be in `.pio/build/genericSTM32F103C8/firmware.elf`
 
 A precompiled version of the firmware is in this repo as `firmware.elf` too.
 
